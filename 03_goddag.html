@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goddag</title>
+</head>
+
+<body>
+    <h4>Lav dit brugernavn</h4>
+    <input type="text" id="navn">
+    <button>Klik og kig i konsollen</button>
+    <script>
+        document.querySelector("button").addEventListener("click",buttonClicked);
+        function buttonClicked(){
+           let brugerNavn = document.querySelector("#navn").value;
+           console.log(`Flot navn! ${brugerNavn} er nu dit brugernavn`);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
