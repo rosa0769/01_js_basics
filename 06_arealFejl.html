@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udregning af areal</title>
+</head>
+
+<body>
+    <h4>Angiv længden af dit sofabord</h4>
+    <input type="text" id="længde">
+    <h4>Angiv bredden af dit sofabord</h4>
+    <input type="text" id="bredde">
+    
+    <button>Klik og beregn arealet af dit sofabord</button>
+    <script>
+        document.querySelector("button").addEventListener("click", buttonClicked);
+        function buttonClicked(){
+                   
+        let længde = document.querySelector("#længde").value;
+        let bredde = document.querySelector("#bredde").value;
+        let a = areal(længde,bredde);
+        let resultat ; 
+        if (isNaN(a)){
+            resultat = "Du må kun skrive tal, ikke bogstaver. Prøv igen."
+        }else if(a <= 0){
+            resultat ="Arealet er mindre eller lig med nul. Prøv igen."
+        }
+
+
+        }
+        function areal(l,b){
+            return l * b;
+        }
+ 
+
+    </script>
+
+</body>
+
+</html>
