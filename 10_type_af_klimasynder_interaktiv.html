@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opgave 10: type af klimasynder - interaktiv</title>
+</head>
+
+<body>
+
+    <h4>Angiv flyturens længde i timer</h4>
+    <input type="number" id="timer">
+    <button>Klik og se Co2 udledning</button>
+    
+    
+    <script>
+             document.querySelector("button").addEventListener("click", buttonClicked);
+        function buttonClicked(){
+
+        let timer = document.querySelector("#timer").value;
+        let co2 = 109;
+        let udledning = timer * co2;
+        let a = udledning(timer, co2);
+        let resultat = `Du har fløjet ${timer} timer og udledt ${udledning} kg co2`;
+        console.log(resultat); 
+
+        if (isNaN(a)) {
+		resultat = "Du må kun skrive tal, ikke bogstaver. Prøv igen!";
+	} else if (a <= 0) {
+		resultat = "Arealet er mindre eller lig med nul. Prøv igen!"
+	} else {
+		resultat = `Arealet er ${a}`;
+
+	}
+
+        if(udledning < 100){
+             resultat = "Godt klaret!";
+        } else if(udledning < 200){
+             resultat = "Ok";
+        } else{
+             resultat = "Alt for meget CO2-udledning";}
+
+        console.log(resultat); 
+     }
+
+    </script>
+
+</body>
+
+</html>
