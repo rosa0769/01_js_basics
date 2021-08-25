@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Opgave 11: Gæt et tal</title>
+    </head>
+    <body>
+      <h1>Gæt et tal!</h1>
+      <p>Jeg tænker på et tal mellem 0 og 10. Kan du gætte tallet?</p>
+   
+      <label for="guess"><p>Jeg gætter på</p></label>
+      <div class="felt">
+      <input type="number" id="guess">
+      <input type="submit" id="submitGuess" value="Tjek mit gæt">
+    </div>
+   
+      <p id="feedback"></p>
+
+      <script>
+        const randomNumber = Math.floor(Math.random() * 10) + 1
+        console.log('Random Number', randomNumber)
+    
+        function checkGuess() {
+          let myGuess = guess.value
+          if (myGuess == randomNumber) {
+            feedback.textContent = "Det var det rigtige tal - godt gættet!"
+          } else if (myGuess > randomNumber) {
+            feedback.textContent = "Det er desværre for højt. Prøv igen!"
+          } else if (myGuess < randomNumber) {
+           feedback.textContent = "Det er desværre for lavt. Prøv igen!"
+         }
+       }
+       submitGuess.addEventListener('click', checkGuess)
+     </script>
+
+     <style>
+       
+         body{background-color: rgb(240, 174, 195);
+            margin: 6rem;
+            padding: 5rem;}
+            
+        h1, p{font-family: Arial, Helvetica, sans-serif;
+              text-transform: uppercase; 
+              text-align: center;}
+
+        .felt{justify-content: center; 
+              text-align: center;}
+
+     </style>
+
+    </body>
+  </html>
