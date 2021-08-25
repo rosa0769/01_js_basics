@@ -14,18 +14,17 @@
     
     <button>Klik og beregn udledningen af Co2</button>
     <script>
+        const co2 = 109;
         document.querySelector("button").addEventListener("click", buttonClicked);
         function buttonClicked(){
                    
         let timer = document.querySelector("#timer").value;
-        let resultat = `Ved ${timer} timers flyrejse har du udledt ${resultat} kg CO2`;
+        let resultat = `Ved ${timer} timers flyrejse har du udledt ${timer*co2} kg CO2`;
         console.log(resultat); 
 
 
         }
-        function co2(timer){
-            return timer * 109;
-        }
+        
  
 
     </script>
