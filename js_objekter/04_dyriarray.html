@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS Objekter</title>
 </head>
 
 <body>
-    <article></article>
+    <article>
 
+    </article>
     <script>
+        let dyr = [{
+            "navn": "Gris",
+            "type": "Pattedyr",
+            "levested": "svinesti"
+        }, {
+            "navn": "Ko",
+            "type": "Pattedyr",
+            "levested": "stald"
+        }, {
+            "navn": "Hugorm",
+            "type": "krybdyr",
+            "levested": "skoven"
+        }]
 
-        let dyr = [
-            {"navn": "gris","type": "pattedyr", "levested": "svinefarm", "billede": "http://mabe-kea.dk/E19/pics/pig.png"},
-            {"navn": "frø","type": "amfibie", "levested": "vandhullet", "billede": "http://mabe-kea.dk/E19/pics/frog.png"},
-            {"navn": "ræv","type": "pattedyr", "levested": "skoven", "billede": "http://mabe-kea.dk/E19/pics/fox.png"},
-            {"navn": "sild","type": "fisk", "levested": "havet", "billede": "http://mabe-kea.dk/E19/pics/sild.jpg"},
-            {"navn": "krokodille","type": "krybdyr", "levested": "floden", "billede": "http://mabe-kea.dk/E19/pics/kroko.jpg"}
-        ];
-        
+       let elm = document.querySelector("article");
+        dyr.forEach(etDyr=>{
+            console.log(etDyr.navn);
+            elm.innerHTML += `<p>Navn: ${etDyr.navn} Type: ${etDyr.type} </p>`;
+        })
 
-        console.log(dyr);
 
 
     </script>
-    
 </body>
+
 </html>
