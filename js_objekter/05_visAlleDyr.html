@@ -15,7 +15,8 @@
 let dyr = [{
             "navn": "gris",
             "type": "pattedyr",
-            "levested": "svinefarm"
+            "levested": "svinefarm",
+            "billede": "http://mabe-kea.dk/E19/pics/pig.png"
         }, {
             "navn": "frø",
             "type": "amfibie",
@@ -36,10 +37,9 @@ let dyr = [{
        
 
        let elm = document.querySelector("article");
-        //løb igennem array "dyr"
         dyr.forEach(etDyr=>{
             console.log(etDyr.navn);
-            elm.innerHTML += `<p>Navn: ${etDyr.navn} Type: ${etDyr.type} </p>`;
+            elm.innerHTML += `<p>Navn: ${etDyr.navn} Type: ${etDyr.type}</p>`;
         })
 
 
