@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+
+        let dyr = [
+            {"navn": "gris","type": "pattedyr", "levested": "svinefarm", "billede": "http://mabe-kea.dk/E19/pics/pig.png"},
+            {"navn": "frø","type": "amfibie", "levested": "vandhullet", "billede": "http://mabe-kea.dk/E19/pics/frog.png"},
+            {"navn": "ræv","type": "pattedyr", "levested": "skoven", "billede": "http://mabe-kea.dk/E19/pics/fox.png"},
+            {"navn": "sild","type": "fisk", "levested": "havet", "billede": "http://mabe-kea.dk/E19/pics/sild.jpg"},
+            {"navn": "krokodille","type": "krybdyr", "levested": "floden", "billede": "http://mabe-kea.dk/E19/pics/kroko.jpg"}
+        ];
+        
+
+        console.log(dyr);
+
+        document.getElementById("demo").innerHTML = dyr.navn + "," + dyr.type + "," + dyr.levested;
+
+
+
+      
+
+    </script>
+    
+</body>
+</html>
