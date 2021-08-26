@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS Objekter</title>
 </head>
 
 <body>
-    <article id="dyr">
-        <h3>Gris</h3>
-        <img src="" alt="">
-        <p>Type: </p>
-        <p>Levested: </p>
+    <article>
+    <h3></h3>
+    <img src="" alt="">
+    <p></p>
+    <p></p>
     </article>
-
     <script>
+        let dyr ={
+            "navn": "Gris",
+            "type": "Pattedyr",
+            "levested": "svinesti",
+            "billede": "http://mabe-kea.dk/E19/pics/pig.png"
+        }
+       let elm = document.querySelector("article");
 
-    let dyr = [{"navn": "gris", "type": "pattedyr", "levested": "svinefarme", "billede": "http://mabe-kea.dk/E19/pics/pig.png"}];
-    console.log(dyr);
+            console.log(dyr);
+            elm.querySelector("img").src = dyr.billede;
+            elm.querySelector("h3").textContent = dyr.navn;
+            elm.querySelector("p").textContent = "Type: "+dyr.type;
+            elm.querySelector("p + p").textContent = "Lever i: "+dyr.levested;
+
+
 
 
     </script>
-    
 </body>
+
 </html>
